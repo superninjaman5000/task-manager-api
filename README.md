@@ -1,5 +1,27 @@
-# task-manager-api
-Task Management System that allows users to create, assign, update, and track tasks
 
+# Task Manager API
 
-This system could mimic functionality similar to project management tools like Trello or Asana, focusing solely on backend capabilities.
+A FastAPI-based backend API for managing tasks and projects, built to demonstrate backend development skills.
+
+## Features
+- User authentication (JWT)
+- CRUD operations for tasks and projects
+- Dockerized for easy deployment
+
+## Technologies Used
+- FastAPI
+- PostgreSQL (coming soon!)
+- Docker
+- Python
+
+## Getting Started
+
+### Prerequisites
+- Docker installed
+- Git installed
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/superninjaman5000/task-manager-api.git
+   cd task-manager-api
