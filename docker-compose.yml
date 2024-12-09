@@ -1,12 +1,28 @@
-version: '3.4'
+
 
 services:
-  taskmanagerapi:
-    image: taskmanagerapi
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+  app:
+    build: .
     ports:
-      - 8000:8000
+      - "8000:8000"
+    volumes:
+      - .:/app
     environment:
       - PYTHONUNBUFFERED=1
+      - DATABASE_URL=postgresql://taskuser:taskpassword@db:5432/taskdb  # Database connection string
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: taskuser
+      POSTGRES_PASSWORD: taskpassword
+      POSTGRES_DB: taskdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
