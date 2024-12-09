@@ -10,7 +10,7 @@ A FastAPI-based backend API for managing tasks and projects, built to demonstrat
 
 ## Technologies Used
 - FastAPI
-- PostgreSQL (coming soon!)
+- PostgreSQL Database integration
 - Docker
 - Python
 
@@ -19,6 +19,7 @@ A FastAPI-based backend API for managing tasks and projects, built to demonstrat
 ### Prerequisites
 - Docker installed
 - Git installed
+- python 3.12
 
 ### Installation
 1. Clone the repository:
